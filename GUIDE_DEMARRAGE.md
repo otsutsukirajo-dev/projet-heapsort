@@ -19,10 +19,11 @@
 ## 2. Structure du dossier du projet
 
 ```
-projet-heapsort/
+projet-heapsort/+
+
 │
 ├── README.md                     # Présentation générale du projet
-├── GUIDE_DEMARRAGE.md             # Ce document
+├── GUIDE_DEMARRAGE.md
 ├── rapport/
 │   └── rapport_final.pdf          # Livrable final (P6)
 │
@@ -50,9 +51,7 @@ projet-heapsort/
 │   └── comparaison_tris.*         # T6 - Heapsort vs Quicksort/Tri fusion (P6)
 │
 └── .gitignore
-```
-
-> Remplacer `.*` par l'extension du langage choisi (`.py`, `.c`, `.cpp`, `.java`...).
+``` 
 
 ---
 
@@ -79,8 +78,7 @@ projet-heapsort/
 
 ## 4. Contrat d'interfaces (à valider en réunion avant de coder)
 
-Exemple générique (à adapter au langage choisi) :
-
+Exemple générique
 ```
 entasser(tableau, i, taille)          -> void        (T1)
 construire_tas(tableau)               -> void        (T3)
@@ -92,9 +90,6 @@ FilePriorite.retirer()                -> valeur      (T5)
 afficher_tas(tas)                     -> void/texte  (T5)
 ```
 
-⚠️ Se mettre d'accord sur ces signatures **avant** de commencer à coder évite les conflits d'intégration en fin de projet.
-
----
 
 ## 5. Workflow Git recommandé
 
