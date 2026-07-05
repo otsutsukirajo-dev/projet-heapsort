@@ -7,7 +7,7 @@ Lancement :
 """
 
 import pytest
-from build_heap import construire_tas, entasser, est_un_tas_valide
+from src.build_heap import construire_tas, entasser, est_un_tas_valide
 
 
 # ---------------------------------------------------------------------

@@ -1,0 +1,75 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+venv.bak/
+venv_old/
+
+# Pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# pytest cache
+.pytest_cache/
+
+# Mypy cache
+.mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/
+coverage.xml
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and temp files
+*.log
+*.tmp
+tmp/
+
+# Project outputs and large generated files
+comparaison_tris.png
+benchmarks/comparaison_tris.png
+rapport/*.pdf
+video/*.mp4
+
+# Python wheel / build artifacts
+pip-wheel-metadata/
+*.whl
+
+# Others
+*.bak
+*.swp
+
+# Ensure we don't ignore source in src/
+# (keep src/ tracked if needed)
