@@ -13,14 +13,14 @@ codés entièrement à la main en Python standard.
 
 | Tâche | Description | Responsable | Statut |
 |-------|--------------|-------------|--------|
-| T1 | Structure de tas & entassement (sift-down/sift-up) | P1 | ✅ Terminé |
-| T2 | Insertion & extraction (min/max) | P2 | ⬜ À faire |
-| T3 | Construction du tas en O(n) | P3 | ✅ Terminé (référence fournie, à valider par P3) |
-| T4 | Algorithme Heapsort complet | P4 | ✅ Terminé |
-| T5 | File de priorité + visualisation | P5 | ⬜ À faire |
-| T6 | Tests, benchmarks, rapport, vidéo | P6 | 🔶 En cours (benchmarks faits, rapport/vidéo à faire) |
+| T1 | Structure de tas & entassement (sift-down/sift-up) | Rajo | ✅ Terminé |
+| T2 | Insertion & extraction (min/max) | Mampita | ⬜ À faire |
+| T3 | Construction du tas en O(n) | Alex | ✅ Terminé (référence fournie, à valider par P3) |
+| T4 | Algorithme Heapsort complet | Feno | ✅ Terminé |
+| T5 | File de priorité + visualisation | Meddy| ⬜ À faire |
+| T6 | Tests, benchmarks, rapport, vidéo | Mihajasoa | ✅ Terminé  |
 
-> Remplacer les noms **P1 à P6** par les noms réels des 6 étudiants avant le rendu final.
+
 
 ---
 
