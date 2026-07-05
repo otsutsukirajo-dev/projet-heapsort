@@ -10,8 +10,12 @@ Contrainte respectée : aucune bibliothèque de structure de données,
 tri effectué entièrement en place sur le tableau Python (list).
 """
 
-from heap import entasser
-from build_heap import construire_tas
+try:
+    from .heap import entasser
+    from .build_heap import construire_tas
+except ImportError:  # pragma: no cover - fallback when executed as a top-level module
+    from heap import entasser
+    from build_heap import construire_tas
 
 
 def heapsort(tableau):

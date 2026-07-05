@@ -12,6 +12,11 @@ il faudra remplacer cette copie par un import :
     from heap import entasser
 """
 
+try:
+    from .heap import entasser
+except ImportError:  # pragma: no cover - fallback when executed as a top-level module
+    from heap import entasser
+
 
 def entasser(tableau, i, taille):
     """

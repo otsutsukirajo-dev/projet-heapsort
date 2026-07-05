@@ -16,11 +16,20 @@ Lancer avec :
     python comparaison_tris.py
 """
 
+import os
 import random
+import sys
 import time
 import copy
 
-from heapsort import heapsort
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+SRC = os.path.join(ROOT, "src")
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+if SRC not in sys.path:
+    sys.path.insert(0, SRC)
+
+from src.heapsort import heapsort
 
 
 # ---------------------------------------------------------------------------
@@ -186,6 +195,8 @@ def generer_graphique(tailles, resultats, chemin_sortie="comparaison_tris.png"):
     Nécessite matplotlib (pip install matplotlib).
     """
     try:
+        import matplotlib
+        matplotlib.use("Agg")
         import matplotlib.pyplot as plt
     except ImportError:
         print(

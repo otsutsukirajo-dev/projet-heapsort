@@ -10,7 +10,7 @@ ou
 
 import unittest
 import random
-from heapsort import heapsort
+from src.heapsort import heapsort
 
 
 class TestHeapsort(unittest.TestCase):
