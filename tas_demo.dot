@@ -1,0 +1,18 @@
+digraph Tas {
+    node [shape=circle, style=filled, fillcolor=lightblue];
+    n0 [label="1"];
+    n0 -> n1;
+    n0 -> n2;
+    n1 [label="3"];
+    n1 -> n3;
+    n1 -> n4;
+    n2 [label="2"];
+    n2 -> n5;
+    n2 -> n6;
+    n3 [label="7"];
+    n3 -> n7;
+    n4 [label="5"];
+    n5 [label="8"];
+    n6 [label="6"];
+    n7 [label="9"];
+}
