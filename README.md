@@ -14,10 +14,10 @@ codés entièrement à la main en Python standard.
 | Tâche | Description | Responsable | Statut |
 |-------|--------------|-------------|--------|
 | T1 | Structure de tas & entassement (sift-down/sift-up) | Rajo | ✅ Terminé |
-| T2 | Insertion & extraction (min/max) | Mampita | ⬜ À faire |
+| T2 | Insertion & extraction (min/max) | Mampita | ✅ Terminé |
 | T3 | Construction du tas en O(n) | Alex | ✅ Terminé (référence fournie, à valider par P3) |
 | T4 | Algorithme Heapsort complet | Feno | ✅ Terminé |
-| T5 | File de priorité + visualisation | Meddy| ⬜ À faire |
+| T5 | File de priorité + visualisation | Meddy| ✅ Terminé |
 | T6 | Tests, benchmarks, rapport, vidéo | Mihajasoa | ✅ Terminé  |
 
 
