@@ -31,24 +31,24 @@ projet-heapsort/+
 │   └── demo.mp4                   # Capture vidéo de démonstration (P6)
 │
 ├── src/
-│   ├── heap.*                     # T1 - Structure de tas & entassement (P1)
-│   ├── heap_ops.*                 # T2 - Insertion & extraction (P2)
-│   ├── build_heap.*               # T3 - Construction du tas O(n) (P3)
-│   ├── heapsort.*                 # T4 - Algorithme Heapsort (P4)
-│   ├── priority_queue.*           # T5 - File de priorité (P5)
-│   └── main.*                     # Point d'entrée, assemble tout
+│   ├── heap.py                     # T1 - Structure de tas & entassement (P1)
+│   ├── heap_ops.py                 # T2 - Insertion & extraction (P2)
+│   ├── build_heap.py               # T3 - Construction du tas O(n) (P3)
+│   ├── heapsort.py                 # T4 - Algorithme Heapsort (P4)
+│   ├── priority_queue.py           # T5 - File de priorité (P5)
+│   └── main.py                     # Point d'entrée, assemble tout
 │
 ├── visualisation/
-│   └── afficher_tas.*             # T5 - Affichage/visualisation du tas (P5)
+│   └── afficher_tas.py             # T5 - Affichage/visualisation du tas (P5)
 │
 ├── tests/
-│   ├── test_heap.*                # Tests unitaires T1/T2
-│   ├── test_build_heap.*          # Tests unitaires T3
-│   ├── test_heapsort.*            # Tests unitaires T4
-│   └── test_priority_queue.*      # Tests unitaires T5
+│   ├── test_heap.py                # Tests unitaires T1/T2
+│   ├── test_build_heap.py          # Tests unitaires T3
+│   ├── test_heapsort.py            # Tests unitaires T4
+│   └── test_priority_queue.py      # Tests unitaires T5
 │
 ├── benchmarks/
-│   └── comparaison_tris.*         # T6 - Heapsort vs Quicksort/Tri fusion (P6)
+│   └── comparaison_tris.py         # T6 - Heapsort vs Quicksort/Tri fusion (P6)
 │
 └── .gitignore
 ``` 
