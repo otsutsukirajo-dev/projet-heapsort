@@ -123,9 +123,22 @@ def est_un_tas(tableau, taille=None):
 
 
 if __name__ == "__main__":
-    # Petit exemple manuel d'utilisation, pour vérification rapide
+    # Démonstration de entasser() : ne restaure qu'un seul nœud.
+    # Pour transformer un tableau quelconque en tas, utiliser
+    # construire_tas() de build_heap.py (T3).
+
+    # Exemple 1 : entasser sur un tableau déjà presque-tas
+    #   [10, 4, 3, 5, 1] est un max-tas valide (racine = 10)
+    #   On échange volontairement la racine pour simuler une extraction
     exemple = [4, 10, 3, 5, 1]
-    print("Avant entasser :", exemple)
-    entasser(exemple, 0, len(exemple))
-    print("Après entasser (racine) :", exemple)
+    print("Tableau de départ (racine dégradée) :", exemple)
+    entasser(exemple, 0, len(exemple))  # restaure uniquement depuis la racine
+    print("Après entasser(0) :", exemple)
     print("Est un tas ?", est_un_tas(exemple))
+    print()
+
+    # Exemple 2 : entasser_iteratif produit le même résultat
+    exemple2 = [4, 10, 3, 5, 1]
+    entasser_iteratif(exemple2, 0, len(exemple2))
+    print("Version itérative :", exemple2)
+    print("Est un tas ?", est_un_tas(exemple2))

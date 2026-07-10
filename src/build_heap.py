@@ -2,46 +2,19 @@
 T3 - Construction du tas (build-heap en O(n))
 Responsable : P3
 Livrable    : construire_tas(tableau)
-Dépend de   : T1 (fonction entasser)
+Dépend de   : T1 (fonctions entasser et est_un_tas, heap.py)
 
-Ce fichier est autonome : il contient une implémentation de entasser()
-(normalement fournie par P1 dans src/heap.py) uniquement pour que
-construire_tas() soit testable indépendamment. En intégration réelle,
-il faudra remplacer cette copie par un import :
-
-    from heap import entasser
+Ce module importe entasser() et est_un_tas() depuis heap.py (T1).
+Il n'y a pas de copie locale : toute modification de heap.py est
+automatiquement prise en compte ici.
 """
 
 try:
-    from .heap import entasser
+    from .heap import entasser, est_un_tas
 except ImportError:  # pragma: no cover - fallback when executed as a top-level module
-    from heap import entasser
+    from heap import entasser, est_un_tas
 
 
-def entasser(tableau, i, taille):
-    """
-    (T1 - dépendance) Restaure la propriété de tas (max-tas) à partir
-    de l'indice i, en supposant que les sous-arbres de i sont déjà
-    des tas valides.
-
-    tableau : liste représentant le tas
-    i       : indice à partir duquel on restaure la propriété de tas
-    taille  : taille "active" du tas (utile pour heapsort plus tard)
-    """
-    gauche = 2 * i + 1
-    droite = 2 * i + 2
-    plus_grand = i
-
-    if gauche < taille and tableau[gauche] > tableau[plus_grand]:
-        plus_grand = gauche
-
-    if droite < taille and tableau[droite] > tableau[plus_grand]:
-        plus_grand = droite
-
-    if plus_grand != i:
-        tableau[i], tableau[plus_grand] = tableau[plus_grand], tableau[i]
-        # On continue à "descendre" là où on a fait l'échange
-        entasser(tableau, plus_grand, taille)
 
 
 def construire_tas(tableau):
@@ -68,20 +41,6 @@ def construire_tas(tableau):
     return tableau
 
 
-def est_un_tas_valide(tableau):
-    """
-    Fonction utilitaire (pour les tests) : vérifie que la propriété
-    de max-tas est respectée pour tout le tableau.
-    """
-    n = len(tableau)
-    for i in range(n):
-        gauche = 2 * i + 1
-        droite = 2 * i + 2
-        if gauche < n and tableau[i] < tableau[gauche]:
-            return False
-        if droite < n and tableau[i] < tableau[droite]:
-            return False
-    return True
 
 
 if __name__ == "__main__":
@@ -97,7 +56,7 @@ if __name__ == "__main__":
     for exemple in exemples:
         original = exemple.copy()
         construire_tas(exemple)
-        valide = est_un_tas_valide(exemple)
+        valide = est_un_tas(exemple)   # fournie par heap.py (T1)
         print(f"Original  : {original}")
         print(f"Tas obtenu: {exemple}")
         print(f"Valide    : {valide}")

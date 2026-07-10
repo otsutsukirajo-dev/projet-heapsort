@@ -4,17 +4,22 @@ Tâche T5 (P5 - Meddy) — File de priorité basée sur un tas
 
 Conforme au contrat d'interfaces du projet :
     FilePriorite.ajouter(valeur)   -> void
-    FilePriorite.retirer()         -> valeur
+    FilePriorite.retirer()         -> valeur  (retire le MINIMUM)
+    FilePriorite.regarder_min()    -> valeur  (consulte sans retirer)
 
-Cette implémentation est une file de priorité MIN (le plus petit élément
-sort en premier). Le tas est maintenu comme une liste interne classique,
-avec les opérations standard de remontée (sift-up) et descente (sift-down).
+⚠️  CONVENTION DE TAS : ce module utilise un MIN-TAS (le plus petit
+    élément sort en premier), à l'inverse de heap.py et heap_ops.py
+    qui implémentent un MAX-TAS.
+    - _remonter() échange si enfant < parent  (montée du petit)
+    - _descendre() échange avec le plus petit enfant  (descente du grand)
+    Ce choix est intentionnel : une file de priorité sert typiquement
+    à extraire le plus urgent (le plus petit), pas le plus grand.
 
 Remarque équipe :
-Si T2 (heap_ops.py, inserer/extraire_min) est terminé et qu'on préfère
-factoriser le code commun, on peut remplacer _remonter/_descendre par des
-appels aux fonctions de heap_ops.py — la classe garde la même interface
-publique (ajouter/retirer), donc ça n'impacte personne d'autre.
+Si T2 (heap_ops.py, inserer/extraire_max) est terminé et qu'on préfère
+factoriser le code commun, les opérations internes _remonter/_descendre
+peuvent rester dans cette classe (elles sont MIN alors que heap_ops est MAX).
+L'interface publique (ajouter/retirer) reste inchangée pour les autres.
 """
 
 

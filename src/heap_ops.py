@@ -3,6 +3,10 @@ Module src/heap_ops.py
 Géré par : P2 (Tâche T2)
 """
 
+try:
+    from .heap import entasser
+except ImportError:  # pragma: no cover - fallback when executed as a top-level module
+    from heap import entasser
 
 def sift_up(tas, i):
     """
@@ -38,12 +42,18 @@ def extraire_max(tas):
 
     racine_max = tas[0]
     tas[0] = tas.pop()
-
-    # Appel de la fonction de P1 pour rétablir le tas vers le bas
-    try:
-        from .heap import entasser
-    except ImportError:  # pragma: no cover - fallback when executed as a top-level module
-        from heap import entasser
     entasser(tas, 0, len(tas))
 
     return racine_max
+
+
+if __name__ == "__main__":
+    # --- Démo manuelle des opérations sur le tas ---
+    tas = []
+    for v in [3, 1, 4, 1, 5, 9, 2, 6]:
+        inserer(tas, v)
+        print(f"inserer({v:2d}) -> tas: {tas}")
+
+    print()
+    while tas:
+        print(f"extraire_max() -> {extraire_max(tas)}, tas restant: {tas}")
