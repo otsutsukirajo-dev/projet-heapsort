@@ -1,5 +1,12 @@
-# Projet Heapsort — Sujet 5
 
+# Projet Heapsort — Sujet 5
+# Groupe 1
+# Membre  : - Rajo            n°301  L1A
+                  - Mihajasoa   n°312  L1A
+                  - Meddy          n°295  L1A
+                  - Alex              n°313  L1A
+                  - Mampita      n°303  L1A
+                  
 Implémentation complète du tri par tas (Heapsort), d'une file de priorité basée
 sur un tas binaire, et comparaison de performance avec Quicksort et Tri fusion.
 
